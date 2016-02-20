@@ -1,0 +1,11 @@
+sudo:required
+dist:trusty
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y -qq gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm
+
+language: python
+python:
+  - "2.7"
+script: "./travis/bbtest.sh"
