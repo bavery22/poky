@@ -8,5 +8,7 @@ echo "SSTATE_MIRRORS=\"file://.* http://98.232.142.195:5688/master/sstate-cache/
 
 echo "Running bitbake, presumably using http sscache..."
 bitbake core-image-minimal
+echo "Downloads:"
 ls -al downloads
-ls -al sstate-cache
+echo "sstate-cache:"
+ls -al sstate-cache | tail
